@@ -6,6 +6,7 @@ namespace RecipeWithAuth.Models
     public class RatingDto
     {
         [Required][Range(1, 5)] public int Value { get; set; }
+        public string? UserId { get; set; }
     }
     
     public class Rating

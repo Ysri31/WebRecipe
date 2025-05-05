@@ -60,8 +60,7 @@ namespace RecipeWithAuth.Controllers
 
             return Ok(new { message = "User registered successfully" });
         }
-
-
+        
 
         private async Task<bool> IsExist(string email, string username)
         {
@@ -82,13 +81,21 @@ namespace RecipeWithAuth.Controllers
 
             var token = GenerateToken(user);
             Console.WriteLine("Token in login" + token);
-            return Ok(new { token });
+            return Ok(new LoginResponse { Token = token });
         }
 
         private string GenerateToken(User user)
         {
             Console.WriteLine("User" + user.UserName);
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecretKey"]));
+
+
+            var jwtKey = _configuration.GetValue<string>("JWT:SecretKey");
+            if (string.IsNullOrEmpty(jwtKey))
+            {
+                throw new Exception("JWT Key is missing in configuration.");
+            }
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes((jwtKey)));
 
             var claims = new[]
             {
@@ -110,7 +117,6 @@ namespace RecipeWithAuth.Controllers
             signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
         );
 
-
             return new JwtSecurityTokenHandler().WriteToken(jwt);
         }
 
@@ -127,7 +133,7 @@ namespace RecipeWithAuth.Controllers
             if (user == null)
                 return NotFound("User not found.");
 
-            var userdetails = new
+            var userdetails = new UserDetailsDto
             {
                 UserName = user.UserName,
                 Email = user.Email,
@@ -205,6 +211,11 @@ namespace RecipeWithAuth.Controllers
 
             return Ok("User deleted");
         }
-
+        [HttpPost("logout")]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            return Ok("logged out successfully.");
+        }
     }
 }

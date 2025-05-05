@@ -10,4 +10,12 @@ namespace RecipeWithAuth.Models
     {
         public ICollection<Recipe> Recipes { get; set; } = new List<Recipe>();
     }
+
+    public class UserDetailsDto
+    {
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+    }
+
 }

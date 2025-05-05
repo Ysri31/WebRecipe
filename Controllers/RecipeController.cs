@@ -30,7 +30,7 @@ namespace RecipeWithAuth.Controllers
 
             if (!string.IsNullOrEmpty(foodType))
             {
-                query = query.Where(r => r.FoodType.ToLower() == foodType.ToLower());
+                query = query.Where(r => r.FoodType.ToLower() == foodType.ToLower()); 
             }
 
             var recipes = await query.ToListAsync();
@@ -200,5 +200,6 @@ namespace RecipeWithAuth.Controllers
             await _context.SaveChangesAsync();
             return Ok("Update successfully");
         }
+        
     }
 }

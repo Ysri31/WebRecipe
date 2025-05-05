@@ -5,6 +5,7 @@ using RecipeWithAuth.Data;
 using RecipeWithAuth.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace RecipeWithAuth.Controllers
 {
     [Route("api/[controller]")]
@@ -58,15 +59,24 @@ namespace RecipeWithAuth.Controllers
                     r.UserId
                 })
                 .ToListAsync();
-
-            var averageRating = ratings.Any() ? Math.Round(ratings.Average(r => r.Value), 2) : 0;
-
-            return Ok(new
+            if (!ratings.Any())
             {
-                AverageRating = averageRating,
-                Ratings = ratings
-            });
-        }
+                return NotFound();
+            }
 
+            var average = ratings.Average(r => r.Value);
+
+            var response = new RatingResponse
+            {
+                AverageRating = average,
+                Ratings = ratings.Select(r => new RatingDto
+                {
+                    UserId = r.UserId,
+                    Value = r.Value
+                }).ToList()
+            };
+
+            return Ok(response);
+        }
     }
 }

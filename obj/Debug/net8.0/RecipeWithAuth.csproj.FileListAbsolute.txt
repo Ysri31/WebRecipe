@@ -175,3 +175,4 @@ D:\RecipeWithAuth\RecipeWithAuth\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch
 D:\RecipeWithAuth\RecipeWithAuth\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\RecipeWithAuth\RecipeWithAuth\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\RecipeWithAuth\RecipeWithAuth\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\RecipeWithAuth\RecipeWithAuth\obj\Debug\net8.0\RecipeWithAuth.sourcelink.json
