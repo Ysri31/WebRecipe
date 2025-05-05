@@ -1,0 +1,80 @@
+/* MyRecipe.css */
+
+/* Container styles */
+.my-recipes-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Heading style */
+  .my-recipes-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Recipe card styles */
+  .recipe-card {
+    border: 1px solid #e2e8f0;  /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    overflow: hidden;  /* Ensures no overflow from the card */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.05);  /* Slightly enlarge the card on hover */
+  }
+  
+  /* Image styling */
+  .recipe-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;  /* Ensures the image covers the area */
+  }
+  
+  /* Title link styling */
+  .recipe-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3182ce; /* Blue color */
+    text-decoration: none;
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .recipe-title:hover {
+    text-decoration: underline;  /* Underline on hover */
+  }
+  
+  @media (min-width: 768px) {
+    /* For larger screens, set a 3-column layout */
+    .recipes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* For smaller screens, show as 1-column layout */
+    .recipes-grid {
+      display: block;
+    }
+  }
+  
+  .delete-button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  

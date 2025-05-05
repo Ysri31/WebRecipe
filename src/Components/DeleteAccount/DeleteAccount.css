@@ -1,0 +1,62 @@
+.delete-account-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+  }
+  
+  .delete-confirmation-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .delete-confirmation-box h2 {
+    color: #e74c3c;
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  
+  .delete-confirmation-box p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .delete-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .yes-btn, .no-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .yes-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .no-btn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .yes-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .no-btn:hover {
+    background-color: #2980b9;
+  }
+  

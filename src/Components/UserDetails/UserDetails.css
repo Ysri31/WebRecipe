@@ -1,0 +1,132 @@
+/* UserDetails.css */
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50;
+  padding: 15px 20px;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li:hover {
+  background-color: #45a049;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #f44336;
+}
+
+/* UserDetails.css */
+
+/* User Details Container */
+.user-details-container {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.user-details-container h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.user-details-container p {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.user-details-container p strong {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.user-details-container p:nth-child(odd) {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.user-details-container p:nth-child(even) {
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Adding hover effect on paragraphs */
+.user-details-container p:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+  .user-details-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .user-details-container h2 {
+    font-size: 26px;
+  }
+
+  .user-details-container p {
+    font-size: 18px;
+  }
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+  .navbar ul {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar li {
+    margin-bottom: 10px;
+  }
+
+  .user-details-container {
+    width: 90%;
+    padding: 15px;
+  }
+}

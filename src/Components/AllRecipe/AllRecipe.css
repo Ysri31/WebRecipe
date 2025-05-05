@@ -1,0 +1,88 @@
+/* Overall layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .filter-section label {
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+  }
+  
+  .filter-section input[type="checkbox"] {
+    accent-color: #28a745;
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Recipe List Layout */
+  .recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+  }
+  
+  /* Recipe Card */
+  .recipe-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Recipe Image */
+  .recipe-thumb {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Recipe Title */
+  .recipe-title-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 10px;
+    color: #343a40;
+    transition: color 0.2s ease;
+  }
+  
+  .recipe-title-link:hover {
+    color: #28a745;
+  }
+  .avg-rating {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f39c12;
+    margin-top: 5px;
+  }
+  
+  
